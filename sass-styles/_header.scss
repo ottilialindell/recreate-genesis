@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    position: relative;
+}
+
+.header-logo {
+    transform: translate(121px, 61px);
+    max-width: 91px;
+    position: absolute;
+}
+
+.navbar {
+    display: flex;
+    transform:translate(947px, 61px);
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.346154px;
+    color: #111111;
+}
