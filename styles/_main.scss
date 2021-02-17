@@ -1,0 +1,64 @@
+$main-txt-color: #111111; 
+
+.main {
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    position: relative;
+
+    &__container {
+        transform:translate(-140px, 180px);
+        margin-left: 20px;
+        position: absolute;
+        max-width: 635px;
+    }
+
+    &__container2 {
+        transform:translate(750px, 375px);
+        min-width: 212px;
+    }
+
+    &__starttext {
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: -0.423077px;
+        color: #4A4FF2;
+        position: absolute;
+    }
+
+    &__h1{
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 60px;
+        color: $main-txt-color;
+        transform:translateY(32px);
+    }
+
+    &__span {
+        color: #4A4FF2;
+    }
+
+    &__underline {
+        opacity: 50%;
+        transform:translateY(10px);
+        transform:translateX(-90px);
+    }
+
+    &__italic {
+        font-family: Mulish;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+        color: $main-txt-color;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+    }
+}
+
+@import 'grid';

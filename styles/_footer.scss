@@ -1,0 +1,50 @@
+.footer {
+    display: flex;
+    position: relative;
+    margin-top: 112px;
+
+    &__logo {
+        max-width: 90px;
+        position: absolute;
+        transform:translate(125px, 3772px);
+    }
+
+    &__navbar {
+        display: flex;
+        transform:translate(947px, 61px);
+        text-align: left;
+    }
+
+    &__ul {
+        list-style-type: none;
+    }
+
+    &__a {
+        font-family: 'Mulish', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: -0.346154px;
+        color: $main-txt-color;
+    }
+
+    &__li {
+        list-style: none;
+        float: left;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-family: 'Mulish', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: -0.346154px;
+        color:$main-txt-color;
+        &:hover {
+            color: grey;
+        }
+    }
+}

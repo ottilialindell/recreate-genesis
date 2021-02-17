@@ -1,0 +1,57 @@
+$main-txt-color: #111111; 
+
+body {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    position: relative;
+
+    &__logo {
+        transform: translate(121px, 61px);
+        max-width: 91px;
+        position: absolute;
+    }
+}
+    
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    transform:translate(947px, 50px);
+    text-align: left;
+
+    &__ul {
+        list-style-type: none;
+    }
+
+    &__a {
+        font-family: 'Mulish', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: -0.346154px;
+        color: $main-txt-color;
+    }
+
+    &__li {
+        list-style: none;
+        float: left;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-family: 'Mulish', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: -0.346154px;
+        color:$main-txt-color;
+        padding-left:29px;
+        &:hover {
+            color: grey;
+        }
+    }
+}
