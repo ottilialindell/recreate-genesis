@@ -75,7 +75,7 @@ h3 {
     font-weight: bold;
     font-size: 22px;
     line-height: 28px;
-    color: #111111;
+    color:  #111111;
 }
 
 .flexbox {
@@ -90,12 +90,12 @@ h3 {
 
 .navbar-1 {
     grid-area: 30%;
-    font-family: Mulish;
+    font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
-    color: #111111;
+    color:  #111111;
     mix-blend-mode: normal;
     opacity: 0.6;
     padding-left: 20px;
@@ -124,7 +124,7 @@ h3 {
     font-size: 18px;
     line-height: 23px;
     letter-spacing: -0.346154px;
-    color:$main-txt-color;
+    color: #111111;
     padding-left:29px;
     &:hover {
         color: grey;
@@ -166,7 +166,7 @@ h3 {
     font-size: 18px;
     line-height: 23px;
     letter-spacing: -0.346154px;
-    color:$main-txt-color;
+    color: #111111;
     padding-left:29px;
     &:hover {
         color: grey;
@@ -255,7 +255,7 @@ h3 {
     font-weight: bold;
     font-size: 18px;
     line-height: 23px;
-    color: #111111;
+    color:  #111111;
 }
 
 .genesis {
@@ -264,7 +264,7 @@ h3 {
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
-    color: #111111;
+    color:  #111111;
 }
 
 p {
@@ -273,7 +273,7 @@ p {
     font-weight: normal;
     font-size: 16px;
     line-height: 26px;
-    color: #111111;
+    color:  #111111;
     mix-blend-mode: normal;
     opacity: 0.6;
 }
@@ -285,7 +285,7 @@ p {
     font-size: 16px;
     line-height: 20px;
     text-align: right;
-    color: #111111;
+    color:  #111111;
 }
 
 .divider1 {

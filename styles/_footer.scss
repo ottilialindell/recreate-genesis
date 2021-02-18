@@ -12,6 +12,7 @@ body {
 
 .footer__logo {
     max-width: 91px;
+    justify-self: start;
     position: absolute;
 }
     
@@ -46,7 +47,7 @@ body {
 
 .icons{
     display: flex;
-    justify-content: space-between;
+    justify-self: end;
 
     &__ul {
         list-style-type: none;
@@ -55,5 +56,6 @@ body {
     &__li {
         list-style: none;
         float: right;
+        padding: 10px;
     }
 }
