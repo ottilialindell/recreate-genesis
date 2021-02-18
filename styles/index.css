@@ -6,6 +6,7 @@ body {
 .header {
   display: flex;
   position: relative;
+  flex-shrink: 0;
 }
 .header__logo {
   transform: translate(121px, 61px);
@@ -53,8 +54,7 @@ body {
 .landingpage {
   display: flex;
   min-height: 100vh;
-  flex-direction: column;
-  justify-content: center;
+  flex-grow: 1;
 }
 
 /* Hur ser jag till att allt content hamnar i mitten oavsett skärmstorlek? */
@@ -62,6 +62,7 @@ body {
   flex: 1;
   justify-content: center;
   position: relative;
+  flex-shrink: 0;
 }
 .main__container {
   transform: translate(125px, 180px);
@@ -281,6 +282,7 @@ h3 {
   grid-template-rows: repeat 1fr;
   transform: translate(126px, 800px);
   padding-bottom: 50px;
+  max-width: 1110px;
 }
 
 .grid__box1 {
@@ -317,8 +319,9 @@ h3 {
   display: grid;
   grid-template-columns: 6fr, 2fr, 2fr, 1fr;
   grid-template-rows: repeat 1fr;
-  transform: translateY(126px, 2000px);
+  transform: translate(126px, 880px);
   padding-bottom: 50px;
+  max-width: 1110px;
 }
 
 .grid3__box1 {
@@ -412,19 +415,26 @@ body {
 .footer {
   display: flex;
   position: relative;
-  transform: translateY(4000px);
+  transform: translate(126px, 1000px);
+  flex-shrink: 0;
+  max-width: 1110px;
+  padding-bottom: 50px;
 }
 
 .footer__logo {
   max-width: 91px;
-  justify-self: start;
+  justify-self: center;
   position: absolute;
 }
 
+/*
+    Behöver sätta - på translate för att nav och icons ska hamna
+    jämt med loggan. Ska det vara så?
+*/
 .footer__navbar {
-  display: flex;
-  justify-content: space-evenly;
   text-align: left;
+  justify-self: center;
+  transform: translate(557px, -10px);
 }
 
 .footer__navbar__ul {
@@ -452,15 +462,14 @@ body {
 }
 
 .icons {
-  display: flex;
-  justify-self: end;
+  transform: translate(700px, -10px);
 }
 .icons__ul {
   list-style-type: none;
 }
 .icons__li {
   list-style: none;
-  float: right;
+  flex-direction: column;
   padding: 10px;
 }
 
@@ -532,23 +541,31 @@ body {
   transform: translateY(750px);
 }
 
+.article2 {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
 .flexbox__container {
   display: flex;
   justify-content: space-between;
   position: relative;
-  transition: transformY(300px);
+  transform: translate(125px, 100px);
+  /* 
+      Varför funkar inte flex-start och stretch nedan?
+  */
 }
 .flexbox__container__box1 {
   width: 475px;
-  height: 262px;
-  margin-top: 164px;
+  height: 300px;
+  align-self: flex-start;
 }
 .flexbox__container__box2 {
   width: 475px;
   height: 300px;
-  margin-top: 200px;
-  display: flex;
-  align-items: stretch;
+  align-self: stretch;
 }
 
 .info-contact {
@@ -611,24 +628,36 @@ button {
 }
 
 .mapouter {
-  transform: translateY(120px);
+  transform: translate(125px, 200px);
 }
 
 /* FOOTER CONTACT-SITE */
+/* 
+    Hur skapar man en footer som funkar utefter innehåll? 
+    Så man slipper justera för varje sida och minimerar kod?
+
+    Varför hamnar iconerna i en rad istället för kolumn här oavsett att
+    första koden jag la in var densamma som i original-footern?
+*/
 .footer-contact {
   display: flex;
   position: relative;
-  transform: translateY(1306px);
+  transform: translate(126px, 350px);
+  flex-shrink: 0;
+  max-width: 1110px;
+  padding-bottom: 50px;
 }
 
 .footer__logo-contact {
   max-width: 91px;
+  justify-self: center;
+  position: absolute;
 }
 
 .footer__navbar-contact {
-  display: flex;
-  justify-content: space-evenly;
   text-align: left;
+  justify-self: center;
+  transform: translate(557px, -10px);
 }
 
 .footer__navbar__ul-contact {
@@ -656,13 +685,14 @@ button {
 }
 
 .icons-contact {
-  display: flex;
-  justify-self: end;
+  transform: translate(700px, -10px);
 }
-.icons-contact__ul-contact {
+
+.icons__ul-contact {
   list-style-type: none;
 }
-.icons-contact__li-contact {
+
+.icons__ul-contact {
   list-style: none;
   float: right;
   padding: 10px;

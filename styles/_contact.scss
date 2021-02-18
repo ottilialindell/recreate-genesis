@@ -1,22 +1,32 @@
 
+.article2 {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
 .flexbox__container {
     display: flex;
     justify-content: space-between;
     position: relative;
-    transition:transformY(300px);
+    transform:translate(125px,100px);    
+
+
+    /* 
+        Varför funkar inte flex-start och stretch nedan?
+    */
 
     &__box1 {
         width: 475px;
-        height: 262px;
-        margin-top: 164px;
+        height: 300px;
+        align-self: flex-start;
     }
 
     &__box2 {
         width: 475px;
         height: 300px;
-        margin-top: 200px;
-        display: flex;
-        align-items: stretch;
+        align-self: stretch;
 
     }
 }
@@ -81,24 +91,38 @@ button {
 }
 
 .mapouter {
-    transform: translateY(120px);
+    transform: translate(125px, 200px);
 }
 
 /* FOOTER CONTACT-SITE */
+
+/* 
+    Hur skapar man en footer som funkar utefter innehåll? 
+    Så man slipper justera för varje sida och minimerar kod?
+
+    Varför hamnar iconerna i en rad istället för kolumn här oavsett att
+    första koden jag la in var densamma som i original-footern?
+*/
+
 .footer-contact {
     display: flex;
     position: relative;
-    transform:translateY(1306px);
+    transform:translate(126px, 350px);
+    flex-shrink:0;
+    max-width: 1110px;
+    padding-bottom: 50px;
 }
 
 .footer__logo-contact {
     max-width: 91px;
+    justify-self: center;
+    position: absolute;
 }
-    
+
 .footer__navbar-contact {
-    display: flex;
-    justify-content: space-evenly;
     text-align: left;
+    justify-self: center;
+    transform:translate(557px, -10px);
 }
 
 .footer__navbar__ul-contact {
@@ -125,16 +149,15 @@ button {
 }
 
 .icons-contact{
-    display: flex;
-    justify-self: end;
+    transform:translate(700px, -10px);
+}
 
-    &__ul-contact {
-        list-style-type: none;
-    }
+.icons__ul-contact {
+    list-style-type: none;
+ }
 
-    &__li-contact {
-        list-style: none;
-        float: right;
-        padding: 10px;
-    }
+.icons__ul-contact {
+    list-style: none;
+    float: right;
+    padding: 10px;
 }

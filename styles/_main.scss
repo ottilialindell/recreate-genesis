@@ -3,8 +3,7 @@ $main-txt-color: #111111;
 .landingpage {
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
-    justify-content: center;
+    flex-grow: 1;
 }
 
 /* Hur ser jag till att allt content hamnar i mitten oavsett skärmstorlek? */
@@ -13,6 +12,7 @@ $main-txt-color: #111111;
     flex: 1;
     justify-content: center;
     position: relative;
+    flex-shrink:0;
 
     &__container {
         transform:translate(125px, 180px);
