@@ -1,50 +1,72 @@
+$main-txt-color: #111111; 
+
+body {
+    display: flex;
+}
+
 .footer {
     display: flex;
     position: relative;
-    margin-top: 112px;
+    transform:translateY(4000px);
+}
 
-    &__logo {
-        max-width: 90px;
-        position: absolute;
-        transform:translate(125px, 6000px);
-    }
+.footer__logo {
+    max-width: 91px;
+    position: absolute;
+    transform:translate(10px, 50px);
+}
+    
+.footer__navbar {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+}
 
-    &__navbar {
-        display: flex;
-        transform:translate(947px, 61px);
-        text-align: left;
+.footer__navbar__ul {
+    list-style-type: none;
+}
+
+.footer__navbar__a {
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.346154px;
+    color: $main-txt-color;
+}
+
+.footer__navbar__li {
+    list-style: none;
+    float: left;
+}
+.footer__navbar__a {
+    text-decoration: none;
+    font-family: 'Mulish', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.346154px;
+    color:$main-txt-color;
+    padding-left:29px;
+    &:hover {
+        color: grey;
     }
+}
+
+.icons{
+    display: flex;
+    justify-content: flex-end;
+
+
 
     &__ul {
         list-style-type: none;
     }
 
-    &__a {
-        font-family: 'Mulish', sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 23px;
-        letter-spacing: -0.346154px;
-        color: $main-txt-color;
-    }
-
     &__li {
         list-style: none;
-        float: left;
-    }
-
-    &__link {
-        text-decoration: none;
-        font-family: 'Mulish', sans-serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 23px;
-        letter-spacing: -0.346154px;
-        color:$main-txt-color;
-        &:hover {
-            color: grey;
-        }
+        float: right;
     }
 }
