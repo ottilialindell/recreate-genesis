@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   display: flex;
 }
@@ -49,19 +50,27 @@ body {
   color: grey;
 }
 
+.landingpage {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hur ser jag till att allt content hamnar i mitten oavsett skärmstorlek? */
 .main {
-  width: 100%;
-  height: 100vh;
+  flex: 1;
+  justify-content: center;
   position: relative;
 }
 .main__container {
-  transform: translate(-140px, 180px);
+  transform: translate(125px, 180px);
   margin-left: 20px;
   position: absolute;
   max-width: 635px;
 }
 .main__container2 {
-  transform: translate(750px, 375px);
+  transform: translate(950px, 385px);
   min-width: 212px;
 }
 .main__starttext {
@@ -88,8 +97,8 @@ body {
 }
 .main__underline {
   opacity: 50%;
-  transform: translateY(10px);
-  transform: translateX(-470px);
+  position: absolute;
+  transform: translateX(950px, 255px);
 }
 .main__italic {
   font-family: Mulish;
@@ -100,15 +109,22 @@ body {
   color: #111111;
   mix-blend-mode: normal;
   opacity: 0.6;
+  padding-top: 20px;
 }
 
+/* 
+    Jag får inte detta griden nedan till att bli 100%: har jag räknat fel på
+    rader? Jag har lagt in hela bildkollaget i Photoshop och försökt 
+    räkna ut :) Först är det ett glapp mellan första och andra bilden
+    i tredje kolumnen. Sedan blir det ingen jämn linje i slutet.
+*/
 .grid__container {
   display: grid;
   grid-template-columns: repeat 3, 1fr;
   grid-template-rows: repeat 28, 1fr;
   grid-gap: 1em;
-  margin-left: -400px;
-  transform: translate(300px, 565px);
+  max-width: 1115px;
+  transform: translate(120px, 566px);
 }
 .grid__container__first {
   grid-area: 1/1/7/2;
@@ -156,10 +172,6 @@ h3 {
   color: #111111;
 }
 
-.grid__box1 {
-  grid-area: 60%;
-}
-
 .grid-text {
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -171,7 +183,8 @@ h3 {
 
 .flexbox {
   display: flex;
-  transform: translateY(700px);
+  max-width: 1115px;
+  transform: translate(126px, 700px);
 }
 
 .flexbox__text {
@@ -180,7 +193,6 @@ h3 {
 }
 
 .navbar-1 {
-  grid-area: 30%;
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -267,7 +279,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat 6fr, 2fr, 2fr, 1fr;
   grid-template-rows: repeat 1fr;
-  transform: translateY(800px);
+  transform: translate(126px, 800px);
   padding-bottom: 50px;
 }
 
@@ -305,7 +317,7 @@ h3 {
   display: grid;
   grid-template-columns: 6fr, 2fr, 2fr, 1fr;
   grid-template-rows: repeat 1fr;
-  transform: translateY(900px);
+  transform: translateY(126px, 2000px);
   padding-bottom: 50px;
 }
 
@@ -380,17 +392,17 @@ p {
 
 .divider1 {
   position: absolute;
-  transform: translateY(730px);
+  transform: translate(126px, 730px);
 }
 
 .divider2 {
   position: absolute;
-  transform: translateY(800px);
+  transform: translate(126px, 800px);
 }
 
 .divider3 {
   position: absolute;
-  transform: translateY(900px);
+  transform: translate(126px, 900px);
 }
 
 body {
@@ -527,22 +539,35 @@ body {
   transition: transformY(300px);
 }
 .flexbox__container__box1 {
-  max-width: 475px;
-  max-height: 262px;
+  width: 475px;
+  height: 262px;
   margin-top: 164px;
 }
 .flexbox__container__box2 {
-  max-width: 475px;
-  max-height: 262px;
-  margin-top: 164px;
+  width: 475px;
+  height: 300px;
+  margin-top: 200px;
+  display: flex;
+  align-items: stretch;
+}
+
+.info-contact {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: #111111;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  margin-top: 60px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: end;
-  max-width: 500px;
+  max-width: 475px;
   width: 100%;
   height: 300px;
 }
@@ -556,15 +581,89 @@ body {
   color: #111111;
   mix-blend-mode: normal;
   opacity: 0.6;
+  margin-top: 10px;
 }
 
 .input-field {
   width: 100%;
   min-height: 32px;
-  margin-bottom: 10px;
-  margin-left: 50px;
+  margin-top: 10px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #979797;
+}
+
+button {
+  background: #4A4FF2;
+  width: 125px;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  margin-top: 38px;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 .mapouter {
-  transform: translateY(500px);
+  transform: translateY(120px);
+}
+
+/* FOOTER CONTACT-SITE */
+.footer-contact {
+  display: flex;
+  position: relative;
+  transform: translateY(1306px);
+}
+
+.footer__logo-contact {
+  max-width: 91px;
+}
+
+.footer__navbar-contact {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+.footer__navbar__ul-contact {
+  list-style-type: none;
+}
+
+.footer__navbar__li-contact {
+  list-style: none;
+  float: left;
+}
+
+.footer__navbar__a-contact {
+  text-decoration: none;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.346154px;
+  color: #111111;
+  padding-left: 29px;
+}
+.footer__navbar__a-contact:hover {
+  color: grey;
+}
+
+.icons-contact {
+  display: flex;
+  justify-self: end;
+}
+.icons-contact__ul-contact {
+  list-style-type: none;
+}
+.icons-contact__li-contact {
+  list-style: none;
+  float: right;
+  padding: 10px;
 }

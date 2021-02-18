@@ -1,10 +1,17 @@
+/* 
+    Jag får inte detta griden nedan till att bli 100%: har jag räknat fel på
+    rader? Jag har lagt in hela bildkollaget i Photoshop och försökt 
+    räkna ut :) Först är det ett glapp mellan första och andra bilden
+    i tredje kolumnen. Sedan blir det ingen jämn linje i slutet.
+*/
+
 .grid__container {
     display: grid;
     grid-template-columns: repeat (3, 1fr);
     grid-template-rows: repeat (28, 1fr);
     grid-gap: 1em;
-    margin-left: -400px;
-    transform:translate(300px, 565px);
+    max-width: 1115px;
+    transform:translate(120px, 566px);
 
     &__first {
         grid-area: 1/1/7/2;
@@ -64,11 +71,6 @@ h3 {
     color: #111111;
 }
 
-.grid__box1 {
-    grid-area: 60%;
-
-}
-
 .grid-text {
     font-family: 'Mulish', sans-serif;
     font-style: normal;
@@ -80,7 +82,9 @@ h3 {
 
 .flexbox {
     display: flex;
-    transform:translateY(700px);
+    max-width: 1115px;
+    transform:translate(126px, 700px);
+    
 }
 
 .flexbox__text {
@@ -89,7 +93,6 @@ h3 {
 }
 
 .navbar-1 {
-    grid-area: 30%;
     font-family: 'Mulish', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -177,7 +180,7 @@ h3 {
     display: grid;
     grid-template-columns:repeat (6fr, 2fr, 2fr, 1fr);
     grid-template-rows: repeat (1fr);
-    transform:translateY(800px);
+    transform:translate(126px, 800px);
     padding-bottom: 50px;
 }
 
@@ -190,8 +193,8 @@ h3 {
 }
 
 .grid__box3 {
-    grid-area: 1/3/2/4;   
-    max-width: 190px;  
+    grid-area: 1/3/2/4; 
+    max-width: 190px;    
 }
 
 .grid__box4 {
@@ -211,11 +214,12 @@ h3 {
     grid-area: 2/4/3/5;     
 }
 
+
 .grid__container3 {
     display: grid;
     grid-template-columns: 6fr, 2fr, 2fr, 1fr;
     grid-template-rows: repeat (1fr);
-    transform:translateY(900px);
+    transform:translateY(126px, 2000px);
     padding-bottom: 50px;
 }
 
@@ -290,16 +294,16 @@ p {
 
 .divider1 {
     position: absolute;
-    transform:translateY(730px);
+    transform:translate(126px, 730px);
 }
 
 
 .divider2 {
     position: absolute;
-    transform:translateY(800px);
+    transform:translate(126px, 800px);
 }
 
 .divider3 {
     position: absolute;
-    transform:translateY(900px);
+    transform:translate(126px, 900px);
 }
