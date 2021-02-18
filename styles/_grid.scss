@@ -175,7 +175,7 @@ h3 {
 
 .grid__container2 {
     display: grid;
-    grid-template-columns: 6fr, 2fr, 2fr, 1fr;
+    grid-template-columns:repeat (6fr, 2fr, 2fr, 1fr);
     grid-template-rows: repeat (1fr);
     transform:translateY(800px);
     padding-bottom: 50px;
@@ -186,7 +186,7 @@ h3 {
 }
 
 .grid__box2 {
-    grid-area: 1/2/2/3;     
+    grid-area: 1/2/2/3;    
 }
 
 .grid__box3 {
@@ -199,7 +199,7 @@ h3 {
 }
 
 .grid__box5 {
-    grid-area: 2/2/3/3;     
+    grid-area: 2/2/3/3;    
 }
 
 .grid__box6 {
