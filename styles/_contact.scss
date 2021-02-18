@@ -99,9 +99,6 @@ button {
 /* 
     Hur skapar man en footer som funkar utefter innehåll? 
     Så man slipper justera för varje sida och minimerar kod?
-
-    Varför hamnar iconerna i en rad istället för kolumn här oavsett att
-    första koden jag la in var densamma som i original-footern?
 */
 
 .footer-contact {
@@ -156,7 +153,7 @@ button {
     list-style-type: none;
  }
 
-.icons__ul-contact {
+.icons__li-contact {
     list-style: none;
     float: right;
     padding: 10px;
