@@ -1,0 +1,25 @@
+.project-site {
+    display: flex;
+    min-height: 100vh;
+    flex-grow: 1;
+}
+
+.main-projects {
+    flex: 1;
+    justify-content: center;
+    position: relative;
+    flex-shrink:0;
+    max-width: 1110px;
+}
+
+.big-image {
+    transform:translate(125px, 270px);
+}
+
+.projects-text {
+    transform:translate(125px,306px);
+    max-width: 1100px;
+}
+
+@import 'projects_grid';
+@import 'projects_flexbox';

@@ -1,16 +1,34 @@
-$main-txt-color: #111111; 
 
-body {
-    display: flex;
-}
+$main-font:  'Mulish', sans-serif;
+
+
+/*
+    Jag har testat en mängd olika varianter för att få
+    footern att vara längst ner på sidan oavsett content,
+    men lyckas inte. Vad är tokigt? 
+    Har kommenterat ut alla tidigare versioner och bara 
+    haft med den infon som de visat, men lyckas ändå inte. 
+    
+    Jag har nu valt att ha den fixed, då den med absolute
+    hamnar mitt under grid-bilderna på förstasidan (dvs ändå 
+    följt med en del content ner från "height" eller hur man
+    ska förklara).
+
+*/
 
 .footer {
+    position: fixed;
+    background-color: #FFF;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
     display: flex;
-    position: relative;
-    transform:translate(126px, 1000px);
+    height: 50px;
     flex-shrink:0;
-    max-width: 1110px;
-    padding-bottom: 50px;
+    margin-left: 125px; 
+    padding-bottom: 20px;
+    margin:auto;
+    transform: translateX(126px);
 }
 
 .footer__logo {
@@ -27,7 +45,7 @@ body {
 .footer__navbar {
     text-align: left;
     justify-self: center;
-    transform:translate(557px, -10px);
+    transform:translate(557px, -5px);
 }
 
 .footer__navbar__ul {
@@ -40,7 +58,7 @@ body {
 }
 .footer__navbar__a {
     text-decoration: none;
-    font-family: 'Mulish', sans-serif;
+    font-family: $main-font;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -54,7 +72,7 @@ body {
 }
 
 .icons{
-    transform:translate(700px, -10px);
+    transform:translate(700px, -5px);
 }
 
 .icons__ul {

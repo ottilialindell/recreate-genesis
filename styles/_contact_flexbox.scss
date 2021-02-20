@@ -1,0 +1,93 @@
+$main-txt-color: #111111; 
+$main-font:  'Mulish', sans-serif;
+
+.flexbox__container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transform:translate(125px,100px);    
+
+
+    /* 
+        Varför funkar inte flex-start och stretch nedan?
+    */
+
+    &__box1 {
+        width: 475px;
+        height: 300px;
+        align-self: flex-start;
+    }
+
+    &__box2 {
+        width: 475px;
+        height: 300px;
+        align-self: stretch;
+
+    }
+}
+
+.info-contact {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #111111;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    margin-top: 60px;
+}
+
+.form {
+    display: flex;
+	flex-direction: column;
+	align-items: stretch;
+    max-width: 475px;
+	width: 100%;
+	height: 300px;
+}
+
+.label {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: $main-txt-color;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    margin-top: 10px;
+}
+
+.input-field {
+	width: 100%;
+	min-height: 32px;
+    margin-top: 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #979797;
+}
+
+%button {
+    background: #4A4FF2;
+    width: 125px;
+    height: 50px;
+    border: 0;
+    outline: 0;
+    margin-top: 38px;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.submit {
+    @extend %button;
+    &:hover {
+        background-color: #161748;
+    }
+}

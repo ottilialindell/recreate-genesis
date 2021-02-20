@@ -1,25 +1,31 @@
 $main-txt-color: #111111; 
+$main-font:  'Mulish', sans-serif;
 
 body {
     display: flex;
 }
 
 .header {
-    display: flex;
-    position: relative;
     flex-shrink: 0;
+    justify-items: center;
+    position: absolute;
+    top: 30px;
+    min-height: 30px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 140px;
 
     &__logo {
-        transform: translate(121px, 61px);
+        margin-left: 121px;
         max-width: 91px;
-        position: absolute;
     }
 }
     
 .nav {
     display: flex;
     justify-content: space-evenly;
-    transform:translate(947px, 50px);
+    transform:translate(1000px, -20px);
     text-align: left;
 
     &__ul {
@@ -27,7 +33,7 @@ body {
     }
 
     &__a {
-        font-family: 'Mulish', sans-serif;
+        font-family: $main-font;
         font-style: normal;
         font-weight: bold;
         font-size: 18px;

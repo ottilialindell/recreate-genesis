@@ -1,0 +1,17 @@
+.main-contact {
+    flex: 1;
+    justify-content: center;
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 55px;
+    box-sizing: border-box;
+    flex-shrink:0;
+    max-width: 1110px;
+}
+
+.mapouter {
+    transform: translate(125px, 200px);
+}
+
+@import 'contact_flexbox';
+

@@ -1,25 +1,44 @@
 $main-txt-color: #111111; 
+$main-font:  'Mulish', sans-serif;
+
+/*
+    Jag får inte main-txt-color och main-font att funka om inte det
+    står med ovan - trots att det står med i _fonts.scss och som @use 
+    överst i index.scss. Scout-appen säger till att det är tokigt på
+    de raderna där jag använt det.
+*/
+
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform:$property;
+}
+
 
 .landingpage {
+    height: 100vh;
+    position: relative;
+    padding-bottom: 55px;
+    box-sizing: border-box;
     display: flex;
-    min-height: 100vh;
+    flex-direction:column; 
     flex-grow: 1;
 }
 
-.article {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
 
 /* Hur ser jag till att allt content hamnar i mitten oavsett skärmstorlek? */
 
 .main {
+    height: 100vh;
+    padding-bottom: 55px;
+    box-sizing: border-box;
+    position: relative;
     flex: 1;
     justify-content: center;
     position: relative;
-    flex-shrink:0;
+    flex-grow:1;
+    max-width: 1110px;
 
     &__container {
         transform:translate(125px, 180px);
@@ -34,7 +53,7 @@ $main-txt-color: #111111;
     }
 
     &__starttext {
-        font-family: Mulish;
+        font-family: $main-font;
         font-style: normal;
         font-weight: bold;
         font-size: 22px;
@@ -45,13 +64,13 @@ $main-txt-color: #111111;
     }
 
     &__h1{
-        font-family: Mulish;
+        font-family: $main-font;
         font-style: normal;
         font-weight: bold;
         font-size: 40px;
         line-height: 60px;
         color: $main-txt-color;
-        transform:translateY(32px);
+        @include transform(translate(0px, 32px));
     }
 
     &__span {
@@ -61,7 +80,7 @@ $main-txt-color: #111111;
     &__underline {
         opacity: 50%;
         position: absolute;
-        transform:translateX(950px, 255px);
+        @include transform(translate (950px, 255px));
     }
 
     &__italic {
