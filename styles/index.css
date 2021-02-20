@@ -471,12 +471,14 @@ body {
 .icons {
   transform: translate(700px, -10px);
 }
+
 .icons__ul {
   list-style-type: none;
 }
+
 .icons__li {
   list-style: none;
-  flex-direction: column;
+  float: right;
   padding: 10px;
 }
 

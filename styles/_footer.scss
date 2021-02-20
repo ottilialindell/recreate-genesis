@@ -55,14 +55,14 @@ body {
 
 .icons{
     transform:translate(700px, -10px);
+}
 
-    &__ul {
-        list-style-type: none;
-    }
+.icons__ul {
+    list-style-type: none;
+ }
 
-    &__li {
-        list-style: none;
-        flex-direction: column;
-        padding: 10px;
-    }
+.icons__li {
+    list-style: none;
+    float: right;
+    padding: 10px;
 }
