@@ -1,3 +1,6 @@
+$main-txt-color: #111111; 
+$main-font:  'Mulish', sans-serif;
+
 /* 
     Jag får inte detta griden nedan till att bli 100%: har jag räknat fel på
     rader? Jag har lagt in hela bildkollaget i Photoshop och försökt 
@@ -63,21 +66,21 @@
 }
 
 h3 {
-    font-family: 'Mulish', sans-serif;
+    font-family: $main-font;
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
     line-height: 38px;
-    color: #111111;
+    color: $main-txt-color;
 }
 
 .grid-text {
-    font-family: 'Mulish', sans-serif;
+    font-family: $main-font;
     font-style: normal;
     font-weight: bold;
     font-size: 22px;
     line-height: 28px;
-    color:  #111111;
+    color:  $main-txt-color;
 }
 
 .flexbox {
@@ -93,12 +96,12 @@ h3 {
 }
 
 .navbar-1 {
-    font-family: 'Mulish', sans-serif;
+    font-family: $main-font;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
-    color:  #111111;
+    color:  $main-txt-color;
     mix-blend-mode: normal;
     opacity: 0.6;
     padding-left: 20px;
@@ -121,13 +124,13 @@ h3 {
 
 .navbar-1__a {
     text-decoration: none;
-    font-family: 'Mulish', sans-serif;
+    font-family: $main-font;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 23px;
     letter-spacing: -0.346154px;
-    color: #111111;
+    color: $main-txt-color;
     padding-left:29px;
     &:hover {
         color: grey;
@@ -135,12 +138,12 @@ h3 {
 }
 
 .navbar-2 {
-    font-family: 'Mulish', sans-serif;
+    font-family: $main-font;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
-    color: #111111;
+    color: $main-txt-color;
     mix-blend-mode: normal;
     opacity: 0.6;
     padding-left: 20px;
@@ -163,13 +166,13 @@ h3 {
 
 .navbar-2__a {
     text-decoration: none;
-    font-family: 'Mulish', sans-serif;
+    font-family: $main-font;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 23px;
     letter-spacing: -0.346154px;
-    color: #111111;
+    color: $main-txt-color;
     padding-left:29px;
     &:hover {
         color: grey;
@@ -265,33 +268,33 @@ h3 {
 }
 
 .genesis {
-    font-family: 'Mulish', sans-serif;
+    font-family: $main-font;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
-    color:  #111111;
+    color:  $main-txt-color;
 }
 
 p {
-    font-family: 'Mulish', sans-serif;
+    font-family: $main-font;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 26px;
-    color:  #111111;
+    color:  $main-txt-color;
     mix-blend-mode: normal;
     opacity: 0.6;
 }
 
 .year {
-    font-family: 'Mulish', sans-serif;
+    font-family: $main-font;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
     text-align: right;
-    color:  #111111;
+    color:  $main-txt-color;
 }
 
 .divider1 {
